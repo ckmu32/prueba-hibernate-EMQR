@@ -9,25 +9,25 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
-@Table(name="Medicamento")
+@Table(name="MEDICAMENTO")
 public class Medicamento implements Serializable{
 	private static final long serialVersionUID = 1L;
 
 	@Id
 	@Column(name="ID")
-	int ID;
+	private int ID;
 	
-	@Column(name="Nombre")
-	String Nombre;
+	@Column(name="NOMBRE")
+	private String Nombre;
 	
-	@Column(name="Caducidad")
-	LocalDate Caducidad;
+	@Column(name="CADUCIDAD")
+	private LocalDate Caducidad;
 	
-	@Column(name="Cantidad")
-	String Cantidad;
+	@Column(name="CANTIDAD")
+	private String Cantidad;
 	
-	@Column(name="tipoDeAplicacion")
-	String tipoDeAplicacion;
+	@Column(name="TIPO_DE_APLICACION")
+	private String tipoDeAplicacion;
 
 	public Medicamento() {
 		

@@ -8,20 +8,20 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
-@Table(name="Paciente")
+@Table(name="PACIENTE")
 public class Paciente implements Serializable{
 
 	private static final long serialVersionUID = 1L;
 	
 	@Id
-	@Column(name="Nombre")
-	String Nombre;
+	@Column(name="NOMBRE")
+	private String Nombre;
 	
-	@Column(name="Genero")
-	String Genero;
+	@Column(name="GENERO")
+	private String Genero;
 	
-	@Column(name="Edad")
-	int Edad;
+	@Column(name="EDAD")
+	private int Edad;
 	
 	public Paciente() {
 		

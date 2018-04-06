@@ -6,24 +6,26 @@ import java.time.LocalDate;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.persistence.Table;
 
 @Entity
+@Table(name="EQUIPO")
 public class Equipo implements Serializable{
 
 	private static final long serialVersionUID = 1L;
 	
 	@Id
-	@Column(name="ID")
-	int ID;
+	@Column(name="ID_EQUIPO")
+	private int ID;
 	
-	@Column(name="Nombre")
-	String Nombre;
+	@Column(name="NOMBRE")
+	private String Nombre;
 	
-	@Column(name="tipoDeEquipo")
-	String tipoDeEquipo;
+	@Column(name="TIPO_DE_EQUIPO")
+	private String tipoDeEquipo;
 	
-	@Column(name="fechaDeCompra")
-	LocalDate fechaDeCompra;
+	@Column(name="FECHA_DE_COMPRA")
+	private LocalDate fechaDeCompra;
 	
 	public Equipo() {
 		

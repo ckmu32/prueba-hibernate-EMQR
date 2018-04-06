@@ -9,37 +9,43 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
-@Table(name="Empleado")
+@Table(name="EMPLEADO")
 public class Empleado implements Serializable{
 	private static final long serialVersionUID = 1L;
 	
 	@Id
-	@Column(name="CURP")
+	@Column(name="CURP_EMPLEADO")
 	private String CURP;
 	
 	@Column(name="NSS")
 	private String NSS;
 	
-	@Column(name="Nombre")
+	@Column(name="NOMBRE")
 	private String Nombre;
 
-	@Column(name="Apellidos")
+	@Column(name="APELLIDOS")
 	private String Apellidos;
 	
 	@Column(name="RFC")
 	private String RFC;
 	
-	@Column(name="Genero")
+	@Column(name="GENERO")
 	private String Genero;
 	
-	@Column(name="Enfermedades")
+	@Column(name="ENFERMEDADES")
 	private String Enfermedades;
 	
-	@Column(name="Estudios")
+	@Column(name="ESTUDIOS")
 	private String Estudios;
 	
-	@Column(name="fechaNacimiento")
+	@Column(name="FECHA_NACIMIENTO")
 	private LocalDate fechaNacimiento;
+	
+	//BIDIRECCIONAL
+	/*Relación bi direccional entre TAMP y EMPLEADO. Solo para pruebas. No se debe usar
+	@OneToOne(mappedBy="empleado",fetch=FetchType.LAZY)
+	private TAMP tamp;
+	*/
 	
 	public Empleado() {
 		
@@ -129,7 +135,26 @@ public class Empleado implements Serializable{
 	public void setFechaNacimiento(LocalDate fechaNacimiento) {
 		this.fechaNacimiento = fechaNacimiento;
 	}
+	
+	//BIDIRECCIONAL
+	/*Relación bi direccional entre TAMP y EMPLEADO. Solo para pruebas
+	public TAMP getTAMP(){
+		return tamp;
+	}
+	
+	public void setTAMP(TAMP tamp) {
+		this.tamp=tamp;
+	}
 
+	@Override
+	public String toString() {
+		return "Empleado[ CURP: "+CURP+" NSS: "+NSS+" Nombre: "+Nombre+" Apellidos: "+Apellidos+
+				" RFC: "+RFC+" Genero: "+Genero+" Enfermedades: "+Enfermedades+" Estudios: "+
+				Estudios+" Fecha de nacimiento: "+fechaNacimiento+" TAMP: "+tamp.getID()+" ]";
+	}
+	*/
+	
+	//toString() normal.
 	@Override
 	public String toString() {
 		return "Empleado[ CURP: "+CURP+" NSS: "+NSS+" Nombre: "+Nombre+" Apellidos: "+Apellidos+

@@ -27,6 +27,9 @@ public class empleadoTest {
 	}
 	
 	private static void insertarPrueba() {
+		/*Esta parte de código funciona correctamente si se quita la relación bidireccional en EMPLEADO.
+		 * La cual está comentada por defecto.
+		 * La idea es que para agregar un EMPLEADO se tenga que hacer al momento de agregar un cargo.*/
 		EntityManager manager = emf.createEntityManager();
 		
 		Empleado emp1 = new Empleado("QWERTY12345","92378162144","Mauricio","Pérez","8234FBD","Masculino",
